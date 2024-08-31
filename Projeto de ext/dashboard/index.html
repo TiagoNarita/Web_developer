@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0f0f0f;
+        color: #fff;
+      }
+
+      .header {
+        padding: 20px;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .header input,
+      .header button {
+        margin-left: 10px;
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+      }
+
+      .header button {
+        background-color: #6200ea;
+      }
+
+      .content {
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+      }
+
+      .card {
+        flex: 1;
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .card .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: #fff;
+        font-size: 24px;
+      }
+
+      .card.waiting .circle {
+        background-color: #666;
+      }
+
+      .card.attending .circle {
+        background-color: #0f9d58;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <input type="date" />
+      <input type="date" />
+      <input type="time" />
+      <input type="time" />
+      <button>Gerar Relatório</button>
+    </div>
+    <div class="content">
+      <div class="card waiting">
+        <div class="circle">11</div>
+        <div>Clientes em Espera</div>
+      </div>
+      <div class="card attending">
+        <div class="circle">6632</div>
+        <div>Clientes em Atendimento</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configurações do Usuário</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0f0f0f;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        padding: 10px 20px;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .user-info {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .user-name {
+        margin-right: 10px;
+      }
+
+      .user-name small {
+        display: block;
+        font-size: 12px;
+        color: #bbb;
+      }
+
+      .menu-icon {
+        cursor: pointer;
+        background-color: #333;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 10;
+      }
+
+      .dropdown-menu.active {
+        display: block;
+      }
+
+      .dropdown-menu li {
+        list-style: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .dropdown-menu li:hover {
+        background-color: #333;
+      }
+
+      .dropdown-menu li i {
+        margin-right: 10px;
+      }
+
+      .content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .content .logo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #fff;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="user-info">
+        <div class="user-avatar">G</div>
+        <div class="user-name">Gustavo <small>BOT</small></div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+          <li><i class="fas fa-cogs"></i> Configurações</li>
+          <li><i class="fas fa-user-alt-slash"></i> Desconectar usuário</li>
+          <li><i class="fas fa-history"></i> Pesquisar histórico</li>
+          <li><i class="fas fa-receipt"></i> Pedidos</li>
+          <li><i class="fas fa-sign-out-alt"></i> Sair</li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="logo">GTG SOFT</div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("dropdownMenu").classList.toggle("active");
+      }
+
+      // Fechar o menu ao clicar fora dele
+      document.addEventListener("click", function (event) {
+        const isClickInside = document.querySelector(".user-info").contains(event.target);
+
+        if (!isClickInside) {
+          document.getElementById("dropdownMenu").classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

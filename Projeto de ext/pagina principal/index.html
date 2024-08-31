@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interface de Chat</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <div class="user">
+            <div class="user-icon">G</div>
+            <div class="user-name">Gustavo</div>
+          </div>
+          <div class="icons">
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+          </div>
+        </header>
+        <div class="search">
+          <input type="text" placeholder="Procurar (Número, nome ou etiqueta)..." />
+        </div>
+        <div class="chat-list">
+          <div class="chat">
+            <div class="chat-icon">G</div>
+            <div class="chat-info">
+              <div class="chat-name">Gustavo</div>
+              <div class="chat-message">Nosso horário de ate...</div>
+            </div>
+            <div class="chat-time">20:41</div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="chat-main">
+        <header class="chat-header">
+          <div class="chat-header-name">Gustavo</div>
+          <div class="chat-header-status">Iniciado há 2 minutos</div>
+        </header>
+        <div class="chat-messages">
+          <div class="message">
+            <div class="message-time">20:41</div>
+            <div class="message-text">Bom dia</div>
+          </div>
+          <div class="bot-message">
+            <div class="bot-message-text">
+              <p>Nosso horário de atendimento:</p>
+              <p>Segunda a sexta: 09:00hs as 19:00hs</p>
+              <p>Sábados: 09:00hs as 18:00hs</p>
+              <p>Domingos e feriados: 10:00hs as 18:00hs.</p>
+              <p>Assim que possível entraremos em contato!</p>
+            </div>
+            <div class="bot-message-time">20:41</div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="contact-info">
+        <header class="contact-header">
+          <h2>Informações do contato</h2>
+        </header>
+        <div class="contact-details">
+          <div class="contact-name">Nome: Gustavo</div>
+          <div class="contact-number">Contato: 5519988782260</div>
+          <div class="contact-description">Descrição</div>
+          <div class="contact-groups">Grupos de contatos</div>
+        </div>
+        <div class="contact-actions">
+          <button>Atender</button>
+          <button>Finalizar</button>
+          <button>Transferir</button>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e2a36;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #27333e;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid #3c4852;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #657786;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+.icons {
+  display: flex;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-color: #657786;
+  border-radius: 50%;
+  margin-left: 0.5em;
+}
+
+.search {
+  padding: 1em;
+  border-bottom: 1px solid #3c4852;
+}
+
+.search input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat {
+  display: flex;
+  padding: 1em;
+  border-bottom: 1px solid #3c4852;
+}
+
+.chat-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #657786;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.chat-name {
+  font-weight: bold;
+}
+
+.chat-message {
+  font-size: 0.9em;
+  color: #b0bec5;
+}
+
+.chat-time {
+  font-size: 0.8em;
+  color: #b0bec5;
+}
+
+.chat-main {
+  flex: 2;
+  background-color: #1e2a36;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 1em;
+  border-bottom: 1px solid #3c4852;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1em;
+  overflow-y: auto;
+}
+
+.message,
+.bot-message {
+  margin-bottom: 1em;
+}
+
+.message-time,
+.bot-message-time {
+  font-size: 0.8em;
+  color: #b0bec5;
+  margin-bottom: 0.3em;
+}
+
+.message-text,
+.bot-message-text {
+  background-color: #27333e;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.bot-message-text {
+  background-color: #4caf50;
+}
+
+.contact-info {
+  width: 25%;
+  background-color: #27333e;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  padding: 1em;
+  border-bottom: 1px solid #3c4852;
+}
+
+.contact-details {
+  flex: 1;
+  padding: 1em;
+}
+
+.contact-name,
+.contact-number,
+.contact-description,
+.contact-groups {
+  margin-bottom: 1em;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  border-top: 1px solid #3c4852;
+}
+
+.contact-actions button {
+  padding: 0.5em 1em;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.contact-actions button:hover {
+  background-color: #45a049;
+}
